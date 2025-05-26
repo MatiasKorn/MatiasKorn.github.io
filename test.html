@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://demo7-suite.ankiro.dk/Rest/PH/SearchPage.css" media="screen" />
+	<link rel="stylesheet" href="https://demo7-suite.ankiro.dk/Rest/PH/RagSection.css"/>
+    <script src="https://demo7-suite.ankiro.dk/Rest/jQuery"></script>
+    <script src="https://demo7-suite.ankiro.dk/Rest/jQuerySignalR"></script>
+	<script src="https://demo7-suite.ankiro.dk/Rest/jQueryBlockUI"></script>
+	<script type="module" src="https://demo7-suite.ankiro.dk/Rest/PH/RagSection.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/markdown-it/13.0.2/markdown-it.min.js" integrity="sha512-ohlWmsCxOu0bph1om5eDL0jm/83eH09fvqLDhiEdiqfDeJbEvz4FSbeY0gLJSVJwQAp0laRhTXbUQG+ZUuifUQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script type="text/javascript" src="https://demo7-suite.ankiro.dk/Rest/PH/SearchPage.js"></script>
+</head>
+<body>
+	<form id="ankiro-form" method="GET"
+		action="https://demo7-suite.ankiro.dk/Rest/PH/SearchPage"
+		data-ajax-action="https://demo7-suite.ankiro.dk/Rest/PH/Search.html"
+        data-ajax-check-rag="https://demo7-suite.ankiro.dk/Rest/PH/CheckRag"        
+        data-ajax-signalr-hubs="https://demo7-suite.ankiro.dk/signalr/hubs"
+		data-ajax-target="#ankiro-result">
+		<input autofocus="autofocus" type="search" name="q" data-type-ahead="https://demo7-suite.ankiro.dk/Rest/PH/TypeAhead" />        
+		<button class="fas fa-search" type="submit"></button>
+	</form>
+	<div id="ankiro-result"></div>
+	<div style="display: none;" id="ragId"></div>
+</body>
+</html>
